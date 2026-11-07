@@ -1,0 +1,5 @@
+# Only PDF files are served from this folder, and nothing in it can run as code
+Options -Indexes -ExecCGI
+<FilesMatch "^(?!.*\.pdf$).*$">
+  Require all denied
+</FilesMatch>
