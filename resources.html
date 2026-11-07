@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resources | Student Association, FMCS, University of Gezira</title>
+    <meta
+      name="description"
+      content="Lectures, references, notes, and past exams organized by program, level, and course."
+    />
+    <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="assets/js/boot.js"></script>
+    <link rel="stylesheet" href="assets/css/resources.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html"
+        ><img src="assets/img/logo.png" alt="" width="34" height="42" /><span
+          >Student Association<small
+            >Mathematical &amp; Computer Science, University of Gezira</small
+          ></span
+        ></a
+      >
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button
+          type="button"
+          class="theme-toggle"
+          aria-label="Switch between light and dark mode"
+        >
+          Theme
+        </button>
+        <a class="btn" href="login.html">Log in</a>
+      </div>
+    </header>
+    <main id="main">
+      <header class="page-header">
+        <h1>Resources</h1>
+        <p>
+          Lectures, references, notes, and past exams, organized by program,
+          then level, then course.
+        </p>
+      </header>
+
+      <form
+        class="filter-bar"
+        id="resource-filter"
+        role="search"
+        aria-label="Filter resources"
+      >
+        <div class="field">
+          <label for="filter-q">Search by course or title</label>
+          <input id="filter-q" name="q" type="search" />
+        </div>
+        <div class="field">
+          <label for="filter-type">Type</label>
+          <select id="filter-type" name="type">
+            <option value="">All types</option>
+            <option value="lecture">Lectures</option>
+            <option value="reference">References</option>
+            <option value="notes">Notes</option>
+            <option value="exam">Past exams</option>
+          </select>
+        </div>
+      </form>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+
+      <div id="resource-list">
+        <details class="program" open>
+          <summary>Computer Science</summary>
+          <details class="level" open>
+            <summary>Level 1</summary>
+            <article class="course" data-course="Programming Fundamentals">
+              <h3>Programming Fundamentals</h3>
+              <ul>
+                <li data-type="lecture">
+                  <a href="downloads/cs-l1-programming-lecture-1.pdf"
+                    >Lecture 1: Variables and control flow</a
+                  >
+                  <span>Lecture, PDF</span>
+                </li>
+                <li data-type="notes">
+                  <a href="downloads/cs-l1-programming-notes.pdf"
+                    >Course notes</a
+                  >
+                  <span>Notes, PDF</span>
+                </li>
+                <li data-type="exam">
+                  <a href="downloads/cs-l1-programming-exam-2025.pdf"
+                    >Final exam 2025</a
+                  >
+                  <span>Past exam, PDF</span>
+                </li>
+              </ul>
+            </article>
+            <article class="course" data-course="Discrete Mathematics">
+              <h3>Discrete Mathematics</h3>
+              <ul>
+                <li data-type="lecture">
+                  <a href="downloads/cs-l1-discrete-lecture-1.pdf"
+                    >Lecture 1: Logic and proofs</a
+                  >
+                  <span>Lecture, PDF</span>
+                </li>
+                <li data-type="reference">
+                  <a href="downloads/cs-l1-discrete-reference.pdf"
+                    >Reference sheet: sets and relations</a
+                  >
+                  <span>Reference, PDF</span>
+                </li>
+              </ul>
+            </article>
+          </details>
+          <details class="level">
+            <summary>Level 2</summary>
+            <article class="course" data-course="Data Structures">
+              <h3>Data Structures</h3>
+              <ul>
+                <li data-type="lecture">
+                  <a href="downloads/cs-l2-ds-lecture-1.pdf"
+                    >Lecture 1: Arrays and linked lists</a
+                  >
+                  <span>Lecture, PDF</span>
+                </li>
+                <li data-type="notes">
+                  <a href="downloads/cs-l2-ds-notes.pdf"
+                    >Trees and graphs: summary notes</a
+                  >
+                  <span>Notes, PDF</span>
+                </li>
+                <li data-type="exam">
+                  <a href="downloads/cs-l2-ds-exam-2025.pdf"
+                    >Mid-term exam 2025</a
+                  >
+                  <span>Past exam, PDF</span>
+                </li>
+              </ul>
+            </article>
+          </details>
+        </details>
+
+        <details class="program">
+          <summary>Mathematics</summary>
+          <details class="level">
+            <summary>Level 1</summary>
+            <article class="course" data-course="Calculus I">
+              <h3>Calculus I</h3>
+              <ul>
+                <li data-type="lecture">
+                  <a href="downloads/math-l1-calculus-lecture-1.pdf"
+                    >Lecture 1: Limits and continuity</a
+                  >
+                  <span>Lecture, PDF</span>
+                </li>
+                <li data-type="exam">
+                  <a href="downloads/math-l1-calculus-exam-2025.pdf"
+                    >Final exam 2025</a
+                  >
+                  <span>Past exam, PDF</span>
+                </li>
+              </ul>
+            </article>
+          </details>
+        </details>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>
+        No resources match your search. Try a different course name or choose
+        All types.
+      </p>
+    </main>
+    <footer class="site-footer">
+      <p>
+        &copy; 2026 Student Association, Faculty of Mathematical and Computer
+        Science, University of Gezira.
+      </p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="team.html">Committee</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="join.html">Join us</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/resources.js" defer></script>
+  </body>
+</html>

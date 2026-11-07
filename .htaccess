@@ -1,0 +1,22 @@
+# Student Association site: Apache settings (InfinityFree)
+Options -Indexes
+ErrorDocument 404 /404.html
+ErrorDocument 403 /404.html
+DirectoryIndex index.html
+
+# Never serve config, SQL, markdown, or git files
+<FilesMatch "(^config\.php$|^\.env|\.sql$|\.md$|^\.git)">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# Turn this on after the free SSL certificate is installed (Phase 5)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]

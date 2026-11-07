@@ -1,0 +1,17 @@
+# Secrets and local config
+config.php
+.env
+
+# Runtime uploads (keep the folder, not the files)
+uploads/*
+!uploads/.gitkeep
+!uploads/.htaccess
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# One-time admin tool (upload by hand, then delete)
+make-hash.php

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact us | Student Association, FMCS, University of Gezira</title>
+    <meta
+      name="description"
+      content="Contact the Student Association of the Faculty of Mathematical and Computer Science: email, office hours, and a message form."
+    />
+    <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="assets/js/boot.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html"
+        ><img src="assets/img/logo.png" alt="" width="34" height="42" /><span
+          >Student Association<small
+            >Mathematical &amp; Computer Science, University of Gezira</small
+          ></span
+        ></a
+      >
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button
+          type="button"
+          class="theme-toggle"
+          aria-label="Switch between light and dark mode"
+        >
+          Theme
+        </button>
+        <a class="btn" href="login.html">Log in</a>
+      </div>
+    </header>
+    <main id="main">
+      <header class="page-header">
+        <h1>Contact us</h1>
+        <p>
+          Send a question, an idea, or a correction to a resource. The committee
+          replies within three working days.
+        </p>
+      </header>
+      <div class="contact-layout">
+        <section aria-labelledby="details-title">
+          <h2 id="details-title">Find us</h2>
+          <address>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:info@fmcs-association.example"
+                >info@fmcs-association.example</a
+              >
+            </p>
+            <p>
+              <strong>Office:</strong> Faculty of Mathematical and Computer
+              Science, University of Gezira, Wad Madani
+            </p>
+            <p>
+              <strong>Office hours:</strong> Sunday to Thursday, 10:00 to 14:00
+            </p>
+          </address>
+          <h3>Social media</h3>
+          <ul>
+            <li>
+              <a
+                href="https://facebook.com/fmcs.association"
+                rel="noopener noreferrer"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a href="https://t.me/fmcs_association" rel="noopener noreferrer"
+                >Telegram</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/fmcs-uofg" rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </li>
+          </ul>
+        </section>
+        <section aria-labelledby="form-title">
+          <h2 id="form-title">Send a message</h2>
+          <div
+            class="form-alert"
+            role="alert"
+            aria-live="assertive"
+            hidden
+          ></div>
+          <form
+            id="contact-form"
+            action="api/contact/send.php"
+            method="post"
+            novalidate
+          >
+            <input type="hidden" name="csrf_token" value="" />
+            <p class="visually-hidden" aria-hidden="true">
+              <label for="website">Leave this field empty</label
+              ><input
+                id="website"
+                name="website"
+                type="text"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </p>
+            <div class="field">
+              <label for="name">Your name (required)</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+                maxlength="100"
+              />
+              <p class="field-error" id="name-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="email">Email address (required)</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                maxlength="150"
+              />
+              <p class="field-error" id="email-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="subject">Subject (required)</label>
+              <select id="subject" name="subject" required>
+                <option value="">Choose a subject</option>
+                <option value="question">General question</option>
+                <option value="resource">Resource problem or request</option>
+                <option value="event">Event idea</option>
+                <option value="project">Project idea</option>
+                <option value="other">Something else</option>
+              </select>
+              <p class="field-error" id="subject-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="message">Message (required)</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                required
+                minlength="10"
+                maxlength="2000"
+              ></textarea>
+              <p class="field-error" id="message-error" hidden></p>
+            </div>
+            <button class="btn" type="submit">Send message</button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <p>
+        &copy; 2026 Student Association, Faculty of Mathematical and Computer
+        Science, University of Gezira.
+      </p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="team.html">Committee</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="join.html">Join us</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
