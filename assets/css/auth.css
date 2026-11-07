@@ -1,0 +1,28 @@
+/* Login, register, admin login, and settings */
+.auth-card {
+  width: 100%;
+  max-width: 30rem;
+  margin-inline: auto;
+  padding: clamp(1.25rem, 4vw, 2.25rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.auth-card h1 {
+  font-size: 1.9rem;
+}
+.auth-card .field,
+.auth-card .form-alert {
+  max-width: none;
+}
+.settings-section {
+  max-width: 40rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.settings-section h2 {
+  font-size: 1.35rem;
+}

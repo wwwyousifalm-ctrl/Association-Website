@@ -1,0 +1,48 @@
+/* Resources: Program > Level > Course */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0 1.25rem;
+  margin-bottom: 1rem;
+}
+.filter-bar .field {
+  flex: 1 1 14rem;
+  max-width: 22rem;
+}
+.result-count {
+  min-height: 1.6em;
+  color: var(--muted);
+}
+.program > summary {
+  font-size: 1.25rem;
+}
+.program > .level {
+  margin: 0 1rem 1rem;
+  padding-inline: 0;
+  background: var(--paper);
+}
+.course {
+  padding: 0.25rem 1rem 1rem;
+}
+.course h3 {
+  font-size: 1.05rem;
+}
+.course ul {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.course li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--line);
+}
+.course li span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}

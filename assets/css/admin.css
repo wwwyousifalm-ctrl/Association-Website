@@ -1,0 +1,51 @@
+/* Admin area */
+#stats .card a {
+  display: block;
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+#stats .card:hover {
+  border-color: var(--accent);
+}
+[data-stat] {
+  display: block;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+#item-form {
+  max-width: 40rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+td .btn {
+  min-height: 36px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.9rem;
+}
+td:last-child {
+  white-space: nowrap;
+}
+td details {
+  margin: 0;
+  border: 0;
+  background: none;
+}
+td summary {
+  padding: 0;
+  color: var(--link);
+  font-weight: 400;
+  text-decoration: underline;
+}
+td details[open] > summary {
+  margin-bottom: 0.5rem;
+  border-bottom: 0;
+}
+td details > :not(summary) {
+  padding-inline: 0;
+  white-space: pre-wrap;
+}
