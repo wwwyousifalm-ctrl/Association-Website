@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Messages | Admin, Student Association</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script src="../assets/js/boot.js"></script>
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+    <script src="../assets/js/auth-guard.js"></script>
+  </head>
+  <body data-access="admin">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="dashboard.html"
+        ><img src="../assets/img/logo.png" alt="" width="34" height="42" /><span
+          >Admin<small>Student Association</small></span
+        ></a
+      >
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Admin">
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="users.html">Users</a></li>
+          <li><a href="messages.html" aria-current="page">Messages</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button
+          type="button"
+          class="theme-toggle"
+          aria-label="Switch between light and dark mode"
+        >
+          Theme
+        </button>
+        <a class="btn btn-secondary" href="../index.html">View site</a>
+        <button type="button" class="btn" data-action="logout">Log out</button>
+      </div>
+    </header>
+    <main id="main" hidden>
+      <header class="page-header">
+        <h1>Messages</h1>
+        <p>
+          Messages sent through the contact form. Mark them read or delete them
+          when they are handled.
+        </p>
+      </header>
+      <section aria-labelledby="list-title">
+        <h2 id="list-title">All entries</h2>
+        <div
+          class="table-wrap"
+          tabindex="0"
+          role="region"
+          aria-labelledby="list-title"
+        >
+          <table id="data-table" data-endpoint="../api/admin/messages.php">
+            <thead>
+              <tr>
+                <th scope="col">From</th>
+                <th scope="col">Email</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Message</th>
+                <th scope="col">Received</th>
+                <th scope="col">Status</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sample Visitor</td>
+                <td>visitor@example.com</td>
+                <td>Question</td>
+                <td>
+                  <details>
+                    <summary>Read message</summary>
+                    <p>
+                      Hello, when does registration for the next workshop open?
+                    </p>
+                  </details>
+                </td>
+                <td>2 Nov 2026</td>
+                <td>New</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-action="read"
+                    data-id="1"
+                  >
+                    Mark read
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-action="delete"
+                    data-id="1"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="empty-state" hidden>No messages yet.</p>
+      </section>
+    </main>
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/admin.js" defer></script>
+  </body>
+</html>

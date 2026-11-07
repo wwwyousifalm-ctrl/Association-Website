@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Manage users | Admin, Student Association</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script src="../assets/js/boot.js"></script>
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+    <script src="../assets/js/auth-guard.js"></script>
+  </head>
+  <body data-access="admin">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="dashboard.html"
+        ><img src="../assets/img/logo.png" alt="" width="34" height="42" /><span
+          >Admin<small>Student Association</small></span
+        ></a
+      >
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Admin">
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="users.html" aria-current="page">Users</a></li>
+          <li><a href="messages.html">Messages</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button
+          type="button"
+          class="theme-toggle"
+          aria-label="Switch between light and dark mode"
+        >
+          Theme
+        </button>
+        <a class="btn btn-secondary" href="../index.html">View site</a>
+        <button type="button" class="btn" data-action="logout">Log out</button>
+      </div>
+    </header>
+    <main id="main" hidden>
+      <header class="page-header">
+        <h1>Manage users</h1>
+        <p>
+          Promote a student to admin or remove an account. This is the only way
+          to create an admin.
+        </p>
+      </header>
+      <section aria-labelledby="list-title">
+        <h2 id="list-title">All entries</h2>
+        <div
+          class="table-wrap"
+          tabindex="0"
+          role="region"
+          aria-labelledby="list-title"
+        >
+          <table id="data-table" data-endpoint="../api/admin/users.php">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Student ID</th>
+                <th scope="col">Program</th>
+                <th scope="col">Level</th>
+                <th scope="col">Role</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sara Mohamed</td>
+                <td>sara@example.com</td>
+                <td>2022001</td>
+                <td>Information Technology</td>
+                <td>Level 3</td>
+                <td>Student</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-action="promote"
+                    data-id="1"
+                  >
+                    Make admin
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-action="delete"
+                    data-id="1"
+                  >
+                    Delete account
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="empty-state" hidden>No accounts found.</p>
+      </section>
+    </main>
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/admin.js" defer></script>
+  </body>
+</html>

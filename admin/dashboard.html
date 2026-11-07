@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard | Admin, Student Association</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script src="../assets/js/boot.js"></script>
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+    <script src="../assets/js/auth-guard.js"></script>
+  </head>
+  <body data-access="admin">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="dashboard.html"
+        ><img src="../assets/img/logo.png" alt="" width="34" height="42" /><span
+          >Admin<small>Student Association</small></span
+        ></a
+      >
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Admin">
+        <ul>
+          <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="users.html">Users</a></li>
+          <li><a href="messages.html">Messages</a></li>
+          <li class="card">
+            <a href="messages.html"
+              ><span data-stat="messages">0</span> new messages</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button
+          type="button"
+          class="theme-toggle"
+          aria-label="Switch between light and dark mode"
+        >
+          Theme
+        </button>
+        <a class="btn btn-secondary" href="../index.html">View site</a>
+        <button type="button" class="btn" data-action="logout">Log out</button>
+      </div>
+    </header>
+    <main id="main" hidden>
+      <header class="page-header">
+        <h1>Dashboard</h1>
+        <p>A quick view of the site. Choose a section to manage.</p>
+      </header>
+      <ul class="card-grid" id="stats">
+        <li class="card">
+          <a href="events.html"><span data-stat="events">0</span> events</a>
+        </li>
+        <li class="card">
+          <a href="projects.html"
+            ><span data-stat="projects">0</span> projects</a
+          >
+        </li>
+        <li class="card">
+          <a href="resources.html"
+            ><span data-stat="resources">0</span> resources</a
+          >
+        </li>
+        <li class="card">
+          <a href="news.html"><span data-stat="news">0</span> announcements</a>
+        </li>
+        <li class="card">
+          <a href="users.html"><span data-stat="students">0</span> students</a>
+        </li>
+        <li class="card">
+          <a href="users.html"><span data-stat="admins">0</span> admins</a>
+        </li>
+      </ul>
+    </main>
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/admin.js" defer></script>
+  </body>
+</html>

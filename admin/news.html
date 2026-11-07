@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Manage announcements | Admin, Student Association</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script src="../assets/js/boot.js"></script>
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+    <script src="../assets/js/auth-guard.js"></script>
+  </head>
+  <body data-access="admin">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="dashboard.html"
+        ><img src="../assets/img/logo.png" alt="" width="34" height="42" /><span
+          >Admin<small>Student Association</small></span
+        ></a
+      >
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Admin">
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="news.html" aria-current="page">News</a></li>
+          <li><a href="users.html">Users</a></li>
+          <li><a href="messages.html">Messages</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button
+          type="button"
+          class="theme-toggle"
+          aria-label="Switch between light and dark mode"
+        >
+          Theme
+        </button>
+        <a class="btn btn-secondary" href="../index.html">View site</a>
+        <button type="button" class="btn" data-action="logout">Log out</button>
+      </div>
+    </header>
+    <main id="main" hidden>
+      <header class="page-header">
+        <h1>Manage announcements</h1>
+        <p>Post updates for the News page.</p>
+      </header>
+      <section aria-labelledby="form-title">
+        <h2 id="form-title">Add or edit</h2>
+        <div class="form-alert" role="status" aria-live="polite" hidden></div>
+        <form
+          id="item-form"
+          action="../api/admin/news.php"
+          method="post"
+          enctype="application/x-www-form-urlencoded"
+          novalidate
+        >
+          <input type="hidden" name="csrf_token" value="" />
+          <input type="hidden" name="id" value="" />
+          <div class="field">
+            <label for="title">Title</label>
+            <input id="title" name="title" type="text" required />
+            <p class="field-error" id="title-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="body">Announcement</label>
+            <textarea id="body" name="body" rows="4" required></textarea>
+            <p class="field-error" id="body-error" hidden></p>
+          </div>
+          <button class="btn" type="submit">Save</button>
+          <button class="btn btn-secondary" type="reset">Clear form</button>
+        </form>
+      </section>
+      <section aria-labelledby="list-title">
+        <h2 id="list-title">All entries</h2>
+        <div
+          class="table-wrap"
+          tabindex="0"
+          role="region"
+          aria-labelledby="list-title"
+        >
+          <table id="data-table" data-endpoint="../api/admin/news.php">
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Published</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mid-term revision sessions start next week</td>
+                <td>25 Oct 2026</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-action="edit"
+                    data-id="1"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-action="delete"
+                    data-id="1"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="empty-state" hidden>
+          Nothing here yet. Use the form above to add the first entry.
+        </p>
+      </section>
+    </main>
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/admin.js" defer></script>
+  </body>
+</html>
